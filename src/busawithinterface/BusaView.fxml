@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="root" prefHeight="700.0" prefWidth="1300.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busawithinterface.BusaViewController"
+                         hgap="20" vgap="20" >
+    
+    <padding>
+        <javafx.geometry.Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    
+    <Text text = "Поиск и добавление книг" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0" 
+        GridPane.columnSpan="2" GridPane.rowSpan="1"
+        style="-fx-font: NORMAL 27 Tahoma;"/>
+    
+        <Button text="Печать всей книги" onAction="#btnPrintAll"  
+        GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+        <Button text="Найти требуемую книгу" onAction="#btnFindSth"  
+        GridPane.columnIndex="0" GridPane.rowIndex="3"/>    
+        
+        <TextField fx:id="findSth"    
+        text="Ключевое слово для поиска"
+        GridPane.columnIndex="1" GridPane.rowIndex="3"
+        GridPane.columnSpan="3" GridPane.rowSpan="1"/>    
+        
+        <Text text = "Добавление новой книги" 
+        GridPane.columnIndex="0" GridPane.rowIndex="4" 
+        GridPane.columnSpan="2" GridPane.rowSpan="1"
+        style="-fx-font: NORMAL 20 Tahoma;"/>
+
+        <TextField fx:id="authorFind"    
+        text="Автор"
+        GridPane.columnIndex="0" GridPane.rowIndex="5"/>  
+                
+        <TextField fx:id="nameFind"    
+        text="Название книги"
+        GridPane.columnIndex="1" GridPane.rowIndex="5"/> 
+       
+        <TextField fx:id="typeFind"    
+        text="Жанр"
+        GridPane.columnIndex="2" GridPane.rowIndex="5"/>  
+       
+        <TextField fx:id="priceFind"    
+        text="Цена"
+        GridPane.columnIndex="3" GridPane.rowIndex="5"/> 
+        
+        <TextField fx:id="dateFind"    
+        text="Дата издания"
+        GridPane.columnIndex="4" GridPane.rowIndex="5"/>   
+        
+        <TextField fx:id="discrFind"    
+        text="Описание"
+        GridPane.columnIndex="5" GridPane.rowIndex="5"/>      
+                    
+        <Button text = "Добавить книгу" onAction="#btnAddNew"
+        GridPane.columnIndex ="0" GridPane.rowIndex="6"/>   
+    
+        <TableView fx:id="tableUsers" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="5" GridPane.rowSpan="1">
+            <columns>
+                <TableColumn prefWidth="100.0" text="Автор" fx:id="authorCol" />
+                <TableColumn prefWidth="150.0" text="Название книги" fx:id="nameCol" />
+                <TableColumn prefWidth="100.0" text="Жанр" fx:id="typeCol" />
+                <TableColumn prefWidth="100.0" text="Цена" fx:id="priceCol" />
+                <TableColumn prefWidth="150.0" text="Дата издания" fx:id="dateCol" />
+                <TableColumn prefWidth="300.0" text="Описание" fx:id="discrCol" />
+            </columns>
+        </TableView>
+</GridPane>
